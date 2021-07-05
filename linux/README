@@ -32,3 +32,5 @@ the what I use.  To add this terminfo entry, type the following as root:
 
 Now all you need to do is set your TERM environment variable to 5250 (or
 xterm-5250 if you are using X-Windows).
+
+
