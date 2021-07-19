@@ -48,12 +48,20 @@
  * i.e. (12240/1440) = (612/72) = 8.5 = page width
  *
  * Note that the 1440 constant came from Michael Madore.
+ * 
+ * 将默认页面大小定义为8.5x11英寸。这些数字有点神奇。
+ * iSeries以每英寸字符数的形式发送页面大小，但PDF使用点。
+ * 低于1440的数字与612和72的比率相同。
+ * 因此，将低于1440的数字与72的比率相乘将得到8.5x11英寸的页面，
+ * 即（12240/1440）=（612/72）=8.5=页面宽度
  */
 #define DEFAULT_PAGE_WIDTH 12240
 #define DEFAULT_PAGE_LENGTH 15840
 /* Define a maximum number of columns that fit in the default page size
  * above.  If the page size is not specified and we are given more characters
  * to print on a line than MAX_COLUMNS we increase the page width.
+ * 定义符合上述默认页面大小的最大列数。
+ * 如果未指定页面大小，并且一行中要打印的字符数多于最大列数，则会增加页面宽度。
  */
 #define MAX_COLUMNS 80
 
